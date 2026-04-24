@@ -105,6 +105,37 @@
         box-shadow: 0 0 15px #00ffcc;
     }
 
+    /* Ripple effect */
+    button::after{
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        background: rgba(255,255,255,0.5);
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: width 0.5s, height 0.5s;
+    }
+
+    button:active::after{
+        width: 200px;
+        height: 200px;
+    }
+
+    p{
+        margin-top: 15px;
+        color: #fff;
+        font-size: 14px;
+        opacity: 0.8;
+        transition: 0.3s;
+    }
+
+    p:hover{
+        color: #00ffcc;
+        letter-spacing: 1px;
+    }
 
 </style>
 </head>
