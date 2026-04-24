@@ -28,5 +28,7 @@ btn.addEventListener("click", ()=>{
     }else{
          msg.innerText = "Sucessfully login"
         msg.style.color = "green"
+        email.value = ""
+        password.value = ""
     }
 })
